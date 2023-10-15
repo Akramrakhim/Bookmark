@@ -173,7 +173,7 @@ img{
   text-transform:uppercase ;
 }
 
-.sitnav__list {
+.sitenav__list {
   display: flex;
   margin: 0;
   padding: 0;
@@ -219,20 +219,20 @@ img{
 }
 
 /* FEATURES-TAB-PANEL */
-.features-tab__panel {
+.feature-tab-panel {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.features-tab-panel__img {
+.feature-tab-panel__img {
   margin-right: 30px;
   object-fit: contain;
 }
-.features-tab-panel__info {
+.feature-tab-panel__info {
   max-width: 445px;
 }
-.features-tab-panel__title {
+.feature-tab-panel__title {
   margin-top: 0;
   margin-bottom: 16px;
   font-weight: 500;
@@ -241,7 +241,7 @@ img{
   letter-spacing: -0.1px;
   color: var(--text-color);
 }
-.features-tab-panel__text{
+.feature-tab-panel__text{
   margin-top: 0;
   margin-bottom: 32px;
   padding: 0;
@@ -287,19 +287,19 @@ img{
   opacity: 0.6;
 }
 
-.tabs__panels {
+.tabpanels {
   padding-top: 75px;
   padding-bottom: 165px;
   background-image:url("../img/blue-pill-bg.svg");
   background-repeat:no-repeat;
   background-position: calc(50% - 580px) 156px;
 }
-.tabs__panel {
+.tabpanels__item {
   display: none;
   align-items: center;
 }
 
-.tabs__panel--active{
+.tabpanels__item--active{
   display: block;
 }
 
@@ -308,7 +308,7 @@ img{
   padding-top: 48px;
   padding-bottom: 48px;
 }
-.site-header-container {
+.site-header__container {
   display: flex;
   align-items: center;
 }
