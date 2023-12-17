@@ -1,3 +1,10 @@
+const modifiers = {
+    tabsItemActive: 'tabs__item--active',
+    tabpanelsItemActive:'tabpanels__item--active',
+    accordionItemOpen: 'accordion__item--open'
+}
+
+
 const elsTabsItem = document.querySelectorAll('.tabs__item');
 const elsTabsPanel = document.querySelectorAll('.tabpanels__item');
 const elsTabLink = document.querySelectorAll('.js-tab-link');
@@ -8,19 +15,19 @@ const elsAccordionItemToggler = document.querySelectorAll('.accordion__item-togg
 
 function deactivateTabItem (){
     elsTabsItem.forEach(function (elsTabsItem){
-        elsTabsItem.classList.remove('tabs__item--active');
+        elsTabsItem.classList.remove(modifiers.tabsItemActive);
     });
 }
 
 function deactivateTabPanels (){
     elsTabsPanel.forEach(function (elTabsPanel){
-        elTabsPanel.classList.remove('tabpanels__item--active');
+        elTabsPanel.classList.remove(modifiers.tabpanelsItemActive);
     });
 }
 
 function closeAccordionItems(){
     elsAccordionItem.forEach(function (elAccordionItem) {
-        elAccordionItem.classList.remove('accordion__item--open');
+        elAccordionItem.classList.remove(modifiers.accordionItemOpen);
     })
 }
 
@@ -35,7 +42,7 @@ elsTabLink.forEach(function (elTabLink) {
         deactivateTabItem();
         
         // Add active class to current tabs__item
-        elTabLink.parentElement.classList.add('tabs__item--active');
+        elTabLink.parentElement.classList.add(modifiers.tabsItemActive);
 
         // Remove active class form tabs__panel elements
                 deactivateTabPanels();
@@ -43,7 +50,7 @@ elsTabLink.forEach(function (elTabLink) {
         // Show active panel
         const elTargetPanel  = document.querySelector(elTabLink.dataset.tabTarget);
         
-        elTargetPanel.classList.add('tabpanels__item--active');
+        elTargetPanel.classList.add(modifiers.tabpanelsItemActive);
     });
 });
 
@@ -52,6 +59,6 @@ elsAccordionItemToggler.forEach(function (elAccordionItemToggler){
     elAccordionItemToggler.addEventListener('click', function (){
         closeAccordionItems();
 
-        elAccordionItemToggler.closest('.accordion__item').classList.add('accordion__item--open');
+        elAccordionItemToggler.closest('.accordion__item').classList.add(modifiers.accordionItemOpen);
     });
 });
